@@ -55,18 +55,19 @@ console.log("Довжина рядка:", lengthOfString)
 // Створи змінну firstLetter і присвой їй першу літеру рядка someString.
 // Створи змінну lastLetter і присвой їй останню літеру рядка someString.
 
-let someString = "Anna write javaScrip well"
+// let someString = "Anna write javaScrip well"
 
-// Створення змінної firstLetter та присвоєння їй першої літери рядка
-let firstLetter = someString[0];
+// // Створення змінної firstLetter та присвоєння їй першої літери рядка
+// let firstLetter = someString[0];
 
-// Створення змінної lastLetter та присвоєння їй останньої літери рядка
-let lastLetter = someString[someString.length - 1];
+// // Створення змінної lastLetter та присвоєння їй останньої літери рядка
+// let lastLetter = someString[someString.length - 1];
 
 
-console.log("Перша літера:", firstLetter);
-console.log("Остання літера:", lastLetter);
+// console.log("Перша літера:", firstLetter);
+// console.log("Остання літера:", lastLetter);
 
+// ------------------------------------------------------------------------------
 
 // Створи дві змінних str1 та str2.
 // Отримай з кожної змінної останню літеру
@@ -98,16 +99,17 @@ console.log(result);
 // для числа 12 = 12 * 5^2 = 300;
 // для числа 512 = 512 * 5^3 = 64000;
 
-let userValue = 2;
+// let userValue = 2;
 
-// Обчислення кількості цифр у числі
-let numberOfDigits = userValue.toString().length;
+// // Обчислення кількості цифр у числі
+// let numberOfDigits = userValue.toString().length;
 
-// Математична операція: userValue помножити на 5 у степені кількості цифр
-let result = userValue * Math.pow(5, numberOfDigits);
+// // Математична операція: userValue помножити на 5 у степені кількості цифр
+// let result = userValue * Math.pow(5, numberOfDigits);
 
-console.log(result);
+// console.log(result);
 
+// ------------------------------------------------------------------------------
 
 // Виведіть на екран загальну кількість яблок і винограду. 
 // Різницю яблока і винограду теж виведіть у консоль.
