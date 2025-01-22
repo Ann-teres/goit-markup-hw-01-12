@@ -137,3 +137,48 @@ const repairBots = 150;
 const defenceBots = 50;
 const message = `${companyName} has ${repairBots + defenceBots} bots in stock`;
 console.log(message); // "Cyberdyne Systems has 200 bots in stock"
+
+
+// Задача-1
+// Напишіть функцію яка приймає два параметри str1 та str2.
+// Функція повинна повернути булеве значення true якщо перша літера str1 дорівнює останій літері str2.
+//  В іншому випадку функція повинна повернути булеве значення false.
+
+
+
+// def check_letters(str1, str2):
+
+//     # Перевіряємо чи перша літера str1 дорівнює останній літера str2
+//     return str1[0] == str2[-1]
+
+
+
+// Задача-2
+// Напишіть функцію яка приймає два параметри str1 та str2. 
+// Функція повинна повернути булеве значення true якщо перша літера str1 дорівнює першій літері str2.
+// В іншому випадку функція повинна повернути булеве значення false.
+
+function compareFirstLetters(str1, str2) {
+    return str1[0] === str2[0]; 
+ }
+
+// Задача-3
+// Напишіть функцію яка приймає два параметри str1 та str2.
+// Функція повинна повернути булеве значення true якщо довжина str1 дорівнює довжині str2.
+//  В іншому випадку функція повинна повернути булеве значення false.
+
+function compareStringLengths(str1,str2){
+return str1.length === str2.length
+}
+
+// Задача-4
+// Напишіть функцію яка приймає число num.
+// Функція повинна повернути булеве значення true якщо кількість цифр у числі парна.
+//  В іншому випадку функція повинна повернути булеве значення false.
+
+function isEvenNumberOfDigits(num) {
+    const numDigits = num.toString().length
+    return numDigits % 2 === 0;
+}
+console.log(isEvenDigitCount(1234)); // true (4 цифри)
+console.log(isEvenDigitCount(12345)); // false (5 цифр)
