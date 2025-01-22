@@ -120,3 +120,20 @@ const diff = apples - grapes;
 console.log(diff)
 
 
+// Замінити вираз перевизначення комбінованим оператором `+=`.
+
+
+let students = 100;
+students += 50;
+console.log(students);
+
+
+// Склади фразу за допомогою шаблонних рядків `A has B bots in stock`, де A, B -
+// змінні вставлені у рядок.
+
+
+const companyName = "Cyberdyne Systems";
+const repairBots = 150;
+const defenceBots = 50;
+const message = `${companyName} has ${repairBots + defenceBots} bots in stock`;
+console.log(message); // "Cyberdyne Systems has 200 bots in stock"
