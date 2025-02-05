@@ -611,14 +611,15 @@ return arr.map(str => {
 //     return arr.filter(num => num % 2 === 0);
 // }
 // console.log(findEven([4,6,1,7]))
+
 // Напиши функцію, яка приймає масив чисел і повертає новий масив, де кожен елемент додано до свого індексу.
 
 function addIndex(arr) {
     return arr.map((num, index) => num + index);
     
-
 }
-console.log(addIndex(([10, 20, 30, 40])))
+console.log(addIndex(([10, 20, 30, 40])));
+
 // Напиши функцію, яка приймає масив чисел і повертає новий масив, що містить лише числа, які діляться на 5.
 
 function findDividableOnFive(arr) {
@@ -684,6 +685,42 @@ console.log(lowerThenAvarage([10, 20, 30, 40]));
 //     в якому кожен елемент буде помножений на його індекс.
 
 function name(arr) {
-    return elem 
+    return arr.map((elem, index) => elem * index);
 }
 
+// Напишіть функцію, яка приймає два масиви(arr1, arr2) і повертає новий масив, в якому будуть елементи,
+//     що зустрічаються у обох масивах більше одного разу.
+
+function findCommonElementMoreThanOnce(arr1, arr2) {
+
+    // Створюємо масив для зберігання спільних елементів, що зустрічаються більше одного разу
+    let commotElement = [];
+
+    // Проходимо через перший масив
+    arr1.forEach(item => {
+        // Перевіряємо, чи цей елемент є в обох масивах більше одного разу
+        if (arr1.filter(x => x === item).length > 1 && arr2.filter(x => x === item).length > 1) {
+            if (!commonElement.includes(item)) {
+                commonElement.push(item);
+            }
+        }
+    })
+      return commonElements;
+}
+console.log(findCommonElementsMoreThanOnce([1, 2, 3, 4, 2, 5], [2, 2, 3, 3, 6])); // [2]
+
+// Напишіть функцію, яка приймає масив чисел і повертає масив, в якому кожен елемент збільшений на 5.
+
+function increaseByFive(arr) {
+    return arr.map(item => item + 5)
+}
+
+console.log(increaseByFive([1, 2, 5, 10]));
+
+// Напишіть функцію, яка приймає масив рядків і повертає масив,
+//     в якому кожен елемент переведений до верхнього регістру.
+
+function toUpperCaseArray(arr) {
+    return arr.map(elem => elem.toUpperCase()) 
+}
+console.log(toUpperCaseArray(["hello", "world", "javascript"]));
