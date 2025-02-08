@@ -642,13 +642,13 @@ console.log(getNewNum([4, 8, 6], [7, 4, 8]));
 //     (суму всіх елементів поділену на кількість елементів).
 
 
-function findAvarage(arr) {
-    if (arr.length === 0) return 0;
-    let sum = arr.reduce((acc, num) => acc + num, 0);
-    return sum / arr.length;
-}
+// function findAvarage(arr) {
+//     if (arr.length === 0) return 0;
+//     let sum = arr.reduce((acc, num) => acc + num, 0);
+//     return sum / arr.length;
+// }
 
-console.log(calculateAverage([10, 20, 30, 40]));
+// console.log(calculateAverage([10, 20, 30, 40]));
 
 // Напишіть функцію, яка приймає масив і повертає масив, що містить лише парні числа з цього масиву.
 
@@ -707,7 +707,7 @@ function findCommonElementMoreThanOnce(arr1, arr2) {
     })
       return commonElements;
 }
-console.log(findCommonElementsMoreThanOnce([1, 2, 3, 4, 2, 5], [2, 2, 3, 3, 6])); // [2]
+// console.log(findCommonElementsMoreThanOnce([1, 2, 3, 4, 2, 5], [2, 2, 3, 3, 6])); 
 
 // Напишіть функцію, яка приймає масив чисел і повертає масив, в якому кожен елемент збільшений на 5.
 
@@ -721,6 +721,76 @@ console.log(increaseByFive([1, 2, 5, 10]));
 //     в якому кожен елемент переведений до верхнього регістру.
 
 function toUpperCaseArray(arr) {
-    return arr.map(elem => elem.toUpperCase()) 
+    return arr.map(str => str.toUpperCase()) 
 }
 console.log(toUpperCaseArray(["hello", "world", "javascript"]));
+
+
+// Напишіть функцію, яка приймає масив чисел і повертає масив, що містить елементи, які зустрічаються 
+// більше одного разу, але тільки числові елементи.
+    
+function repitedNumber(arr) {
+   return arr.filter(x = x === number).length
+}
+console.log([2, 6, 8, 6, 1, 6]);
+
+// Напишіть функцію, яка приймає масив і повертає масив, що містить всі елементи,
+//     які починаються на літеру "a".
+
+function findA(arr) {
+  
+    return arr.filter(char => char.toLowerCase().startsWith('a')) 
+}
+console.log(findA(["orange", "grape", "pear", "Anna"]))
+
+//  Напишіть функцію, яка приймає два масиви(arr1, arr2) і повертає новий масив,
+//     в якому будуть усі елементи,
+//     що є в arr1, але не в arr2, з урахуванням порядку.
+
+function differentChar(arr1, arr2) {
+    return arr1.filter(char => !arr2.includes(char))
+}
+console.log(differentChar([1, 2, 3, 4, 5], [2, 4]));
+
+//  Напишіть функцію, яка приймає масив рядків і повертає масив,
+//     де всі рядки мають довжину більше 5 символів.
+
+function filterLongStrings(arr)  {
+    arr.filter(str => str.length > 5)
+}
+console.log(filterLongStrings(["hello", "world", "JavaScript", "code"]));
+
+// Напишіть функцію, яка приймає масив чисел і повертає масив,
+//     в якому всі від'ємні числа будуть замінені на нуль.
+
+function replaceNegativesWithZero(arr) {
+    return arr.map(num => num < 0 ? 0 : num);
+}
+console.log(replaceNegativesWithZero([1, -2, 3, -4, 5]));
+
+//  Напишіть функцію, яка приймає масив і повертає масив, де кожен елемент буде додатним,
+//     навіть якщо він був від'ємним.
+
+function makeAllPositive(arr)  {
+    return arr.map(num => Math.abs(num));
+}
+const numbers = [3, -1, 5, -7, 8, -2];
+console.log(makeAllPositive(numbers)); 
+
+// Напишіть функцію, яка приймає два масиви(arr1, arr2) і повертає новий масив,
+//     що містить елементи з arr1, відсортовані по черзі(по зростанню),
+//     і елементи з arr2, відсортовані по черзі(по спаданню).
+
+function sortArrays(arr1, arr2) {
+    const sortedArr1 = arr1.sort((a, b) => a - b); // Сортуємо arr1 по зростанню
+    const sortedArr2 = arr2.sort((a, b) => b - a); // Сортуємо arr2 по спаданню
+
+    return [...sortedArr1, ...sortedArr2];  // Об'єднуємо масиви
+
+}
+
+const arr1 = [5, 1, 9, 3];
+const arr2 = [8, 2, 6, 4];
+
+
+console.log(sortArrays(arr1, arr2))
