@@ -221,7 +221,7 @@ console.log(checkAge(10));
 // Задача-22
 // Напишіть функцію, яка приймає два параметри: 
 
-isStudent(булевий) та hasID(булевий). 
+// isStudent(булевий) та hasID(булевий). 
 // Якщо ви студент і маєте посвідчення, поверніть "Вхід дозволено",
 //     якщо ні, поверніть "Вхід заборонено".
 
@@ -250,3 +250,71 @@ function checkClothing(temperature, isRaining) {
 }
 
 console.log(checkClothing(-5, true));
+
+
+// Задача-1
+// Напишіть функцію для охоронця нічного клубу яка приймає два параметри age та balance.
+// Функція повинна повернути рядок "Wellcome" якщо age більший за 18 та balance більший за 100. 
+// В іншому випадку функцію повинна повернути рядок "Goodbye".
+
+function checkBalance(age, balance) {
+    if (balance > 18 && balance > 100) {
+        return "Wellcome"
+    } else {
+        return "Goodbye"
+    }
+}
+
+console.log(checkBalance(20, 150))
+
+
+// Напишіть функцію яка для магазину яка приймає кількість товару(amount) та його вартість(price).
+// Функція повинна повернути рядок "Ми це купуємо" якщо загальна вартість не перевищує 1000,
+//     в іншому випадку функція повинна повернути рядок "Це занадто дорого".
+
+function shopDecision(amount, price) {
+      let totalCost = amount * price;
+    
+    if (totalCost <= 1000 ) {
+        return "Ми це купуємо"
+    } else {
+        return "Це занадто дорого"
+    }
+}
+console.log(shopDecision(5, 100)); 
+
+
+// Задача-5
+// Напишіть функцію, яка приймає 2 параметри: isRaining(булевий) і hasUmbrella(булевий). 
+// Якщо дощить і у вас є парасоля, поверніть "Не змокнеш", якщо дощить і немає парасолі,
+//     поверніть "Змокнеш", в іншому випадку поверніть "Без дощу".
+
+function name(params) {
+    if (isRaining && hasUmbrella) {
+        return  "Не змокнеш"
+    } else if 
+        (isRaining && !hasUmbrella) {
+        return "Змокнеш"
+    } else {
+        return "Без дощу"
+        }
+}
+
+// Задача-6
+// Напишіть функцію, яка приймає оцінку студента(grade) за шкалою від 0 до 100.
+//  Якщо оцінка 90 і більше, поверніть "Відмінно", від 75 до 89 - "Добре", від 50 до 74 - "Задовільно",
+//     нижче 50 - "Незадовільно".
+
+function grades(grade) {
+    if (grade >= 90) {
+        return "Відмінно"
+    } else if ( grade >= 75){
+return "Добре"
+    } else if (grade  50) {
+        return "Задовільно"
+    } else  {
+        return "Незадовільно"
+    }
+}
+
+console.log(grades(56))

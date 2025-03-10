@@ -374,7 +374,7 @@ function returnElements(arr) {
 }
 returnElements([2, 5, 3])
 
-// Напиши функцію, яка приймає масив та виводить кожен парний елемент масиву у консоль.
+// F
 
 function printEvenElements(arr) {
     arr.forEach(element => {
@@ -794,3 +794,181 @@ const arr2 = [8, 2, 6, 4];
 
 
 console.log(sortArrays(arr1, arr2))
+
+
+
+
+// Напиши функцію яка приймає масив чисел.
+//  Функція повинна видалити усі негативні(відємні числа) з масиву та повернути новий масив.
+
+ function removeNegatives(num) {
+  return num.filter(num => num >= 0)
+ }
+console.log(removeNegatives([-10, -5, 0, 5, 10]));
+ 
+// Напиши функцію яка приймає масив та повертає суму всіх чисел у масиві.
+
+function sumArray(numbers) {
+
+   return numbers.reduce((sum, num) => sum + num, 0);
+}
+// Напиши функцію, яка приймає два параметри(arr, max).
+//  Де arr - це масив чисел.Потрібно вивести лише ті елементи масиву які більші за max.
+
+function name(arr, max) {
+    return arr.filter(num => num > max)
+}
+
+// Напиши функцію, яка приймає масив чисел та виводить лише парні числа у консоль.
+function name(arr,num) {
+    return arr.filter(num => {
+        if (num % 2 === 0)
+        {      console.log(num);
+}
+    } )
+}
+// Напиши функцію, яка приймає масив та виводить кожен елемент масиву у консоль.
+
+function name(arr,elem) {
+    return arr.forEach(elem => (console.log(elem)))
+}
+// Напиши функцію, яка приймає масив чисел і повертає новий масив, що містить лише числа, які діляться на 3.
+function name(arr, num) {
+    return arr.filter(num => num % 3 === 0 )
+}
+
+// Напиши функцію, яка приймає масив чисел і повертає новий масив,
+//     де кожне число помножене на індекс, за яким воно знаходиться в масиві.
+
+function multiplyByIndex(arr) {
+  return arr.map((num,index) => num * index)
+}
+// Напиши функцію яка приймає масив рядочків.Потрібно змінити кожен елемент масиву наступним чином - якщо довжина
+//  рядочку менша за 6 до привести рядок до нижнього регістру, в іншому випадку привести до верхнього регістру.
+
+function modifyStrings(arr) {
+  return arr.map(str => {
+    if (str.length < 6) {
+      return str.toLowerCase();  
+    } else {
+      return str.toUpperCase();  
+    }
+  });
+}
+
+// Напиши функцію яка приймає два масиви (arr1, arr2), та повертає новий масив де будуть лише ті елементи які зустрічаються і в arr1 і arr2.
+
+function findCommonElements(arr1,arr2) {
+    return arr1.filter(element  => arr2.includes(element))
+}
+
+// Напиши функцію яка приймає два масиви (arr1, arr2), та повертає новий масив де будуть лише елементи масиву arr1 яких не має у масиві arr2.
+
+function findDifferentElement(arr1, arr2) {
+    return arr1.filter (element => !arr2.includes(element))
+}
+
+console.log(findDifferentElement[2, 6, 4, 3], [3, 6, 4, 9])
+
+// Напиши функцію яка приймає масив та знаходить мінімальний елемент.
+
+function minElem(arr) {
+    return Math.min(...arr)
+}
+// Напиши функцію яка приймає масив та знаходить максимальний елемент.
+
+function maxElem(arr) {
+    return Math.max(...arr)
+}
+
+// Напиши функцію яка приймає масив та повертає масив лише з тих елементів які більші за середнє значення всіх елементів масиву.
+
+function name(arr,element) {
+    number.reduce((sum, number) => sum + number,0) / arr.length
+    return arr.filter(number => number > average)
+}
+
+// Напиши функцію яка приймає масив та повертає масив лише з тих елементів які більші за власний індекс.
+
+function name(num,index) {
+return arr.filter((num,index) => num > index)  
+}
+
+// Напишіть функці яка приймає масив чисел. Функція повинна занйти мінімальний елемент та видалити його з масиву.
+
+function removeMinElement(arr) {
+    if (arr.length === 0) return arr;
+    
+    const minValue = Math.min(...arr);
+    const minIndex = arr.indexOf(minValue);
+
+ arr.splice(minIndex, 1);
+    return arr
+}
+
+
+// Напиши функцію яка приймає два параметри start та end.
+// Функія повина повернути масив де будуть числа з діапазону але лише ті у яких не має цифри 5.
+//  К прикладу числа(51, 25, 15, 256) не підходять бо містять символ "5" у собі.
+
+
+
+function filterNumbersWithoutFive(start, end) {
+
+  return Array.from({ length: end - start + 1 }, (_, i) => start + i)
+    .filter(num => !num.toString().includes("5"));
+}
+
+console.log(filterNumbersWithoutFive(1, 20)); 
+
+// Напиши функцію, яка приймає рядок і повертає останній символ цього рядка.
+
+function name(params) {
+  return  str.charAt(str.length - 1)
+}
+
+// Напиши функцію, яка приймає число і повертає true, якщо число парне, і false, якщо ні.
+
+function test(num) {
+    if (num % 2 === 0) {
+        return true
+    } else {
+        return false
+    }
+}
+console.log(test(3))
+
+// Напиши функцію яка приймає два числа.Якщо одне з чисел дорівнює нуль то повернути null,
+// в іншому випадку повернути добуток цих двох чисел.
+    
+function test2(num1, num2) {
+    if (num1 % 2 === 0 || num2 % 2 === 0) {
+    return null
+    } else {
+   return num1 + num2
+}
+}
+console.log(test2(1, 11))
+
+// Напиши функцію яка приймає рядок і повертає цей самий рядок але огорнутий у тег div.
+//     Приклад: на вході був рядок "Hello world" а на виході рядок "<div>Hello world<div>"
+
+function test3(str) {
+    return `<div>${str}<div>`
+}
+
+// Напиши функцію, яка приймає рядок і повертає кількість слів у ньому (слова розділені пробілами).
+
+function test4(str) {
+   return str.trim().split('/\s+/').length
+}
+console.log(test4("  Це тестовий рядок "))
+
+// Напиши функцію, яка приймає рядок і повертає його довжину помножену на кількість слів в цьому рядку.
+
+function test5(str) {
+    str.trim().split('/\s+/').length
+    return length * result 
+
+}
+console.log(test5("  Це тестовий рядок "))
